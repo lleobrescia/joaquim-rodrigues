@@ -1,0 +1,381 @@
+/*
+Theme Name: Joaquim Rodrigues Portfolio
+Author: Joaquim Rodrigues / Leonardo Brescia
+Author URI: http://joaquimrodrigues.com.br/  - http://leobrescia.com.br/
+
+Version: 1.0
+*/
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Repeatable Patterns
+ * 2.0 - Sidebar
+   * 2.1 - Header
+   * 2.2 - Dados
+ * 3.0 - Content
+   * 3.1 - Sobre Mim
+   * 3.2 - Portfolio
+ * 4.0 - Media Queries
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * 1.0 Repeatable Patterns
+ * -----------------------------------------------------------------------------
+ */
+@import url('fonts/styles.css');
+html{
+ font-size: 100.01%;
+}
+body{
+ font-size: 62.5%;
+ color: #1b1b1b;
+}
+p{
+  font-size: 1.4em;
+  color: black;
+  font-family: 'HelveticaNeue-Light';
+  margin: 0
+}
+strong{
+  font-weight: 700;
+  font-family: 'HelveticaNeueLTStd-Hv';
+}
+a{
+  color: #d4ad1c;
+  text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+h1
+,h2
+,h3
+,h4{
+  font-family: 'HelveticaNeueLTStd-Cn';
+}
+h1{
+  font-size: 2.6em;
+}
+h2{
+  font-size: 2.2em;
+}
+h3{
+  font-size: 1.8em;
+}
+h4{
+  font-size: 1.6em;
+}
+ /**
+ * 2.0 Sidebar
+ * -----------------------------------------------------------------------------
+ */
+
+.sidebar{
+  margin-bottom: 38px;
+}
+
+
+ /**
+  * 2.1 Header
+  * -----------------------------------------------------------------------------
+  */
+
+.sidebar__header{
+  background: #1b1b1b;
+  padding-top: 62px;
+  padding-bottom: 49px;
+}
+.logo{
+  text-align: center;
+}
+
+/* Header Nav */
+
+.nav{
+  display: none;
+	margin-top: 33px;
+  padding-left: 35px;
+}
+.nav a{
+	display: block;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  margin-bottom: 17px;
+}
+.nav a:hover{
+  color: white;
+}
+.nav a:first-child{
+	background: url("images/icon_sobre.png") left no-repeat;
+	padding-left: 20px;
+}
+.nav a:last-child{
+	margin-bottom: 0;
+	background: url("images/icon_port.png") left no-repeat;
+	padding-left: 20px;
+}
+
+
+/**
+ * 2.2 Dados
+ * -----------------------------------------------------------------------------
+ */
+
+.sidebar__dados{
+  background: #d4ad1c;
+  padding-bottom: 22px;
+  padding-top: 15px;
+  text-align: center;
+}
+.sidebar__dados a{
+  font-size: 1.4em;
+  color: #1b1b1b;
+  display: block;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sidebar__dados a:hover{
+  color: white;
+}
+.sidebar__dados--whats{
+  padding-left: 13px;
+  background: url("images/whatsapp.png") no-repeat left;
+  width: 130px;
+}
+.sidebar__dados--skype{
+  padding-left: 4px;
+  background: url("images/skype.png") no-repeat left;
+  width: 139px;
+}
+.sidebar__dados--mail{}
+
+
+  /**
+  * 3.0 Content
+  * -----------------------------------------------------------------------------
+  */
+
+.content{
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.content h2{
+  margin-bottom: 8px;
+}
+
+
+  /**
+  * 3.1 Sobre Mim
+  * -----------------------------------------------------------------------------
+  */
+
+.sobre__mim{
+  margin-bottom: 76px;
+}
+.sobre__mim__foto{
+	display: none;
+}
+
+  /**
+  * 3.2 Portfolio
+  * -----------------------------------------------------------------------------
+  */
+
+.portfolio__title{
+  font-family: 'ConeriaScriptDemo';
+  font-size: 7.2em;
+  margin:0
+}
+
+/* Portfolio Filtro */
+
+.seletor{
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.seletor__lista {
+  list-style: none;
+}
+.seletor__lista li{
+  display: inline-block;
+}
+.seletor__lista--botao{
+  background: black;
+  color: white;
+  border: none;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 27px;
+  padding-right: 27px;
+  margin-right: 5px;
+  font-size: 1.8em;
+  border-radius: 56px;
+  font-family: 'HelveticaNeueLTStd-CnO';
+  font-style: oblique;
+  outline: 0;
+}
+.seletor__lista--botao:hover
+,.seletor__lista--botao.active{
+  background: #d4ad1c;
+}
+
+
+/* Portfolio Lista */
+
+.portfolio__list{
+  display: -webkit-box;			/* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;				 /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;			/* TWEENER - IE 10 */
+  display: -webkit-flex;		 /* NEW - Chrome */
+  display: flex;
+	-webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+
+/* Portfolio Item */
+
+.portfolio__single{
+  margin-bottom: 29px;
+  max-width: 319px
+}
+.portfolio__single img{
+  width: 100%;
+  margin-bottom: 9px;
+}
+.portfolio__single--descricao{
+  font-family: arial
+}
+.portfolio__single--categoria{
+  color: #d4ad1c;
+  text-transform: lowercase;
+}
+
+/**
+ * 4.0 Media Queries
+ * -----------------------------------------------------------------------------
+ */
+
+/* Does the same thing as <meta name="viewport" content="width=device-width">,
+ * but in the future W3C standard way. -ms- prefix is required for IE10+ to
+ * render responsive styling in Windows 8 "snapped" views; IE10+ does not honor
+ * the meta tag. See https://core.trac.wordpress.org/ticket/25888.
+ */
+@-ms-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+@media screen and (min-width: 401px){
+  .seletor__lista
+  ,.portfolio__list{
+    padding-left: 49px;
+  }
+  .sobre__mim{
+    padding-left: 49px;
+    background: url("images/ico_sobre2.png") no-repeat top left
+  }
+  .portfolio{
+    padding-left: 49px;
+    background: url("images/ico_porfolio2.png") no-repeat  left 35px
+  }
+}
+
+@media screen and (min-width: 673px) ,(min-width: 673px) and (-webkit-min-device-pixel-ratio:0){
+  .portfolio__single{
+    margin-right: 17px
+  }
+  .portfolio__list .portfolio__single:last-child{
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 783px),(min-width: 783px) and (-webkit-min-device-pixel-ratio:0) {
+  .content {
+    padding-left: 23px;
+    padding-top: 90px;
+    position: absolute;
+    left: 278px;
+  }
+  .sidebar{
+    margin-bottom: 0;
+    position: fixed;
+    width: 278px;
+    display: block;
+    top: 0;
+    background: #d4ad1c;
+    bottom: 0;
+  }
+	.sidebar__dados{
+	  padding-left: 35px;
+		margin-top: 50px;
+		text-align: left;
+	}
+	.sidebar__dados a{
+		margin-right: 0;
+		margin-left: 0;
+    margin-bottom: 7px;
+	}
+	.sidebar__dados--whats{
+		width: 100%;
+    padding-left: 23px;
+	}
+	.sidebar__dados--skype{
+		width: 100%;
+		padding-left: 23px;
+	}
+	.nav{
+		display: block;
+	}
+}
+@media screen and (min-width: 846px),(min-width: 846px) and (-webkit-min-device-pixel-ratio:0) {
+	.sobre__mim{
+    display: -webkit-box;			/* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;				 /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;			/* TWEENER - IE 10 */
+    display: -webkit-flex;		 /* NEW - Chrome */
+		display: flex;
+	}
+	.sobre__mim__text{
+		display: inline-block;
+		width: 300px;
+	}
+	.sobre__mim__foto {
+    display: inline-block;
+    margin-left: 37px;
+	}
+	.sobre__mim__foto img{
+		max-width: 100%;
+	}
+}
+@media screen and (min-width: 1040px),(min-width: 1040px) and (-webkit-min-device-pixel-ratio:0) {
+	.nav{
+		padding-top: 86px;
+	}
+	.portfolio__title{
+		display: inline-block;
+	}
+	.portfolio__text{
+		display: inline-block;
+		width: 353px;
+		margin-left: 28px;
+	}
+}
+@media screen and (min-width: 1110px) ,(min-width: 1110px) and (-webkit-min-device-pixel-ratio:0){
+
+	.portfolio{
+    padding-left: 61px;
+	}
+	.sobre__mim{
+		padding-left: 61px;
+	}
+}
+@@media screen and (min-width: 1110px) ,(min-width: 1110px) and (-webkit-min-device-pixel-ratio:0)  {
+  .content{
+    width: 1075px;
+  }
+}
