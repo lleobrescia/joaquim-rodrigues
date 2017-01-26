@@ -1,4 +1,4 @@
-# Joaquim Rodrigues - Design & Vídeoeo #
+# Joaquim Rodrigues - Design & Vídeo #
 
 - Tema WordPress 
 - Responsivo 
